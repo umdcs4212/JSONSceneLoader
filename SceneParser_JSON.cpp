@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <stack>
 
 #include "SceneParser_JSON.h"
 
