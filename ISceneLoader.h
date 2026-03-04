@@ -9,7 +9,6 @@ class ISceneLoader {
 public:
   virtual ~ISceneLoader() = default;
 
-  // 1. Pre-allocation hooks
   virtual void reserveCameras(size_t count) = 0;
   virtual void reserveLights(size_t count) = 0;
   virtual void reserveShapes(size_t count) = 0;
@@ -48,7 +47,6 @@ public:
     float refractiveIndex = 1.0f;
   };
 
-  // 2. Data hooks (Using simple POD structs or primitives)
   virtual void addCamera(const std::string &name, const std::string &type,
                          const vec &pos, const vec &viewDir, float focalLength,
                          float imagePlaneWidth) = 0;
